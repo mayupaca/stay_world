@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <script src="scripts/vendors/pace.js"></script>
+    <link rel="stylesheet" href="styles/loader.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,6 +20,30 @@
   <body>
     <div id="global-container">
       <div id="container">
+        <div class="mobile-menu__cover"></div>
+        <div class="nav-trigger"></div>
+        <header class="header">
+          <div class="header__inner">
+            <div class="logo">
+              <img class="logo__img" src="images/logo.svg" />
+              <span class="logo__stay">Stay</span>
+              <span class="logo__world">World</span>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__ul">
+                <li class="header__li"><a href="#">Service</a></li>
+                <li class="header__li"><a href="#">Company</a></li>
+                <li class="header__li"><a class="btn filled" href="#">Contact</a></li>
+              </ul>
+            </nav>
+            <button class="mobile-menu__btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          
+        </header>
         <div id="content">
           <div class="hero">
             <div class="swiper">
@@ -42,6 +68,12 @@
             </div>
           </div>
           <div id="main-content">
+            <aside class="side left">
+              <div class="side__inner">
+                <a href="#" class="twitter icon tween-animate-title">Twitter</a>
+                <a href="#" class="fb icon tween-animate-title">Facebook</a>
+              </div>
+            </aside>
             <main>
               <section class="travel">
                 <div class="travel__inner">
@@ -182,6 +214,11 @@
                 </div>
               </section>
             </main>
+            <aside class="side right">
+              <div class="side__inner">
+                <span class="tween-animate-title">&copy; MayuMurasuzu</span>
+              </div>
+            </aside>
           </div>
         </div>
         <div class="footer">
@@ -197,12 +234,37 @@
               <li class="footer__li"><a href="#">Company</a></li>
               <li class="footer__li"><a href="#">Sitemap</a></li>
             </ul>
-            <div class="footer__copywrite">
-              &copy; MayuMurasuzu
-            </div>
+            <div class="footer__copywrite">&copy; MayuMurasuzu</div>
           </nav>
         </div>
       </div>
+      <nav class="mobile-menu">
+        <div class="logo">
+          <img class="logo__img" src="images/logo.svg" />
+          <span class="logo__stay">Stay</span>
+          <span class="logo__world">World</span>
+        </div>
+        <ul class="mobile-menu__main">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Our Service</span>
+              <span class="sub-title">about service</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">About Us</span>
+              <span class="sub-title">our history</span>
+            </a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="#">
+              <span class="main-title">Contact Us</span>
+              <span class="sub-title">Let's connect!</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <script src="scripts/vendors/gsap.min.js"></script>
 
@@ -211,6 +273,8 @@
 
     <script src="scripts/libs/scroll.js"></script>
     <script src="scripts/vendors/scroll-polyfill.js"></script>
+    
+    <script src="scripts/libs/mobile-menu.js"></script>
 
     <script src="scripts/libs/text-animation.js"></script>
     <script src="scripts/main.js"></script>
