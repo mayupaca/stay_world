@@ -17,3 +17,5 @@ https://magenta-semolina-369081.netlify.app/
 ## Functionalities
 > At the top of the website, we implemented a type of slider that switches automatically.
 > In addition, many scrolling animations are implemented, such as animations in which images appear from the left and animations in which characters sway.
+
+https://user-images.githubusercontent.com/47727645/197349755-a719137b-06d1-4f47-95c0-59acd4263f43.mp4
