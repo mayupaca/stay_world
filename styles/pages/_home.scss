@@ -80,7 +80,7 @@ main {
 }
 
 .hero {
-  @extend .pb-lg
+  @extend .pb-lg;
 }
 
 .travel {
@@ -106,7 +106,11 @@ main {
   &__img {
     @extend .mb-sm;
     height: 300px;
-    box-shadow: inset 0 0 30px $cBlack;
+    transition: box-shadow 0.5s ease 1.6s;
+
+    &.inview {
+      box-shadow: inset 0 0 30px $cBlack;
+    }
     @include mq(md) {
       flex-basis: 47%;
     }
@@ -315,6 +319,7 @@ main {
   position: fixed;
   top: 70%;
   transform: translateY(-50%);
+  transition: all 0.3s ease;
 
   @include mq(xl) {
     display: block;
@@ -329,14 +334,20 @@ main {
   }
 
   &.left {
-    left: 50px;
+    left: -50px;
+    &.inview {
+      left: 50px;
+    }
     & .side__inner {
       transform-origin: top left;
       transform: rotate(-90deg);
     }
   }
   &.right {
-    right: 50px;
+    right: -50px;
+    &.inview {
+      right: 50px;
+    }
     & .side__inner {
       transform-origin: top right;
       transform: rotate(90deg);
@@ -348,7 +359,7 @@ main {
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: -20px;
@@ -358,7 +369,6 @@ main {
     background-position: center;
     background-repeat: none;
     background-size: contain;
-
   }
   &.twitter::before {
     background-image: url(../images/twitter.svg);
